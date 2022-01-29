@@ -34,11 +34,11 @@ abstract class HomeStoreBase with Store {
   }
 
   String? degreeClassification({required double imc}) {
-    if (imc < 18.5 || (imc >= 18.5 && imc <= 24.99)) {
+    if (imc < 18.5 || (imc >= 18.5 && imc < 25)) {
       return 'Obesidade Grau 0 ';
-    } else if (imc >= 25 && imc <= 29.99) {
+    } else if (imc >= 25 && imc < 30) {
       return 'Obesidade Grau I ';
-    } else if (imc >= 30 && imc <= 39.99) {
+    } else if (imc >= 30 && imc < 40) {
       return 'Obesidade Grau II ';
     } else if (imc >= 40) {
       return 'Obesidade Grau III ';

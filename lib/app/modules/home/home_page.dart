@@ -36,6 +36,7 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: AppColors.primary,
@@ -55,7 +56,7 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
               onPressed: () {
                 weightController.clear();
                 heightController.clear();
-                controller.reset();
+                controller.resetForm();
               },
             ),
           ],

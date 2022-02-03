@@ -1,7 +1,7 @@
 import '../../core/ui/themes/app_colors.dart';
 import '../../core/ui/themes/app_images.dart';
 import '../../core/ui/widgets/rounded_button_widget.dart';
-import '../../core/ui/widgets/rounded_input_widget.dart';
+import '../../core/ui/widgets/input_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -47,12 +47,12 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const RoundedInputWidget(
+                    const InputTextWidget(
                       hintText: 'Usuario',
                       iconData: Icons.email,
                     ),
                     const SizedBox(height: 8.0),
-                    const RoundedInputWidget(
+                    const InputTextWidget(
                       hintText: 'Senha',
                       iconData: Icons.lock,
                       obscureText: true,
@@ -60,7 +60,7 @@ class LoginPage extends StatelessWidget {
                     RoundedButtonWidget(
                       color: AppColors.black,
                       onPressed: () async {
-                        Modular.to.navigate('/home/');
+                        Modular.to.navigate('/imc/');
                       },
                       child: Text(
                         'ENTRAR',

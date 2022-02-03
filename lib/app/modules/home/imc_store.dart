@@ -1,9 +1,10 @@
 import 'package:mobx/mobx.dart';
-part 'home_store.g.dart';
 
-class HomeStore = HomeStoreBase with _$HomeStore;
+part 'imc_store.g.dart';
 
-abstract class HomeStoreBase with Store {
+class ImcStore = _ImcStoreBase with _$ImcStore;
+
+abstract class _ImcStoreBase with Store {
   @observable
   double? _imc;
 

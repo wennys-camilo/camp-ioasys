@@ -7,4 +7,4 @@
 </div>
 
 ## Screens
-<img height="480px" src="screenshots/login.png"> <img height="480px" src="screenshots/home.png">
+<img height="480px" src="screenshots/login.png"><img height="480px" src="screenshots/drawer.png"> <img height="480px" src="screenshots/imc.png"> <img height="480px" src="screenshots/tasks_delete.png"> <img height="480px" src="screenshots/tasks.png">

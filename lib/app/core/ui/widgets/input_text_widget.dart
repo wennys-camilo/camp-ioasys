@@ -2,7 +2,7 @@ import '../themes/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class RoundedInputWidget extends StatelessWidget {
+class InputTextWidget extends StatelessWidget {
   final FormFieldValidator<String>? validator;
   final bool? obscureText;
   final void Function()? onPressed;
@@ -15,7 +15,7 @@ class RoundedInputWidget extends StatelessWidget {
   final void Function(String)? onChanged;
   final String? labelText;
   final TextEditingController? controller;
-  const RoundedInputWidget(
+  const InputTextWidget(
       {Key? key,
       this.validator,
       this.inputFormatters,

@@ -1,11 +1,11 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import '../home/home_store.dart';
-import 'home_page.dart';
+import 'imc_store.dart';
+import 'imc_page.dart';
 
-class HomeModule extends Module {
+class ImcModule extends Module {
   @override
   final List<Bind> binds = [
-    Bind.lazySingleton((i) => HomeStore()),
+    Bind.lazySingleton((i) => ImcStore()),
   ];
 
   @override

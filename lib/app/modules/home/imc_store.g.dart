@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_store.dart';
+part of 'imc_store.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,8 +8,8 @@ part of 'home_store.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$HomeStore on HomeStoreBase, Store {
-  final _$_imcAtom = Atom(name: 'HomeStoreBase._imc');
+mixin _$ImcStore on _ImcStoreBase, Store {
+  final _$_imcAtom = Atom(name: '_ImcStoreBase._imc');
 
   @override
   double? get _imc {
@@ -24,7 +24,7 @@ mixin _$HomeStore on HomeStoreBase, Store {
     });
   }
 
-  final _$_weightAtom = Atom(name: 'HomeStoreBase._weight');
+  final _$_weightAtom = Atom(name: '_ImcStoreBase._weight');
 
   @override
   String? get _weight {
@@ -39,7 +39,7 @@ mixin _$HomeStore on HomeStoreBase, Store {
     });
   }
 
-  final _$_heightAtom = Atom(name: 'HomeStoreBase._height');
+  final _$_heightAtom = Atom(name: '_ImcStoreBase._height');
 
   @override
   String? get _height {
@@ -54,7 +54,7 @@ mixin _$HomeStore on HomeStoreBase, Store {
     });
   }
 
-  final _$_degreeAtom = Atom(name: 'HomeStoreBase._degree');
+  final _$_degreeAtom = Atom(name: '_ImcStoreBase._degree');
 
   @override
   String? get _degree {
@@ -69,28 +69,28 @@ mixin _$HomeStore on HomeStoreBase, Store {
     });
   }
 
-  final _$HomeStoreBaseActionController =
-      ActionController(name: 'HomeStoreBase');
+  final _$_ImcStoreBaseActionController =
+      ActionController(name: '_ImcStoreBase');
 
   @override
   dynamic onChangeWeight(String value) {
-    final _$actionInfo = _$HomeStoreBaseActionController.startAction(
-        name: 'HomeStoreBase.onChangeWeight');
+    final _$actionInfo = _$_ImcStoreBaseActionController.startAction(
+        name: '_ImcStoreBase.onChangeWeight');
     try {
       return super.onChangeWeight(value);
     } finally {
-      _$HomeStoreBaseActionController.endAction(_$actionInfo);
+      _$_ImcStoreBaseActionController.endAction(_$actionInfo);
     }
   }
 
   @override
   dynamic onChangeHeight(String value) {
-    final _$actionInfo = _$HomeStoreBaseActionController.startAction(
-        name: 'HomeStoreBase.onChangeHeight');
+    final _$actionInfo = _$_ImcStoreBaseActionController.startAction(
+        name: '_ImcStoreBase.onChangeHeight');
     try {
       return super.onChangeHeight(value);
     } finally {
-      _$HomeStoreBaseActionController.endAction(_$actionInfo);
+      _$_ImcStoreBaseActionController.endAction(_$actionInfo);
     }
   }
 

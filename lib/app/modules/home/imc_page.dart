@@ -5,9 +5,11 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import '../../core/ui/themes/app_colors.dart';
 import '../../core/ui/themes/app_images.dart';
+import '../../core/ui/widgets/custom_app_bar_widget.dart';
+import '../../core/ui/widgets/custom_drawer_widget.dart';
+import '../../core/ui/widgets/input_text_widget.dart';
 import '../../core/ui/widgets/rounded_button_widget.dart';
-import '../../core/ui/widgets/rounded_input_widget.dart';
-import 'home_store.dart';
+import 'imc_store.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -17,7 +19,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeStore> {
+class _HomePageState extends ModularState<HomePage, ImcStore> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController weightController = TextEditingController();
   TextEditingController heightController = TextEditingController();
@@ -36,31 +38,20 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const CustomDrawerWidget(),
       backgroundColor: AppColors.white,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: AppColors.primary,
-        title: Row(
-          children: [
-            Image.asset(AppImages.logoHome),
-            const Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(
-                'Calculadora IMC',
-                style: TextStyle(fontSize: 15),
-              ),
-            ),
-            const Spacer(),
-            IconButton(
-              icon: const Icon(Icons.refresh),
-              onPressed: () {
-                weightController.clear();
-                heightController.clear();
-                controller.resetForm();
-              },
-            ),
-          ],
-        ),
+      appBar: CustomAppBar(
+        title: 'Calculadora IMC',
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: () {
+              weightController.clear();
+              heightController.clear();
+              controller.resetForm();
+            },
+          ),
+        ],
       ),
       body: Observer(
         builder: (context) {
@@ -80,7 +71,7 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                         height: 100,
                       ),
                     ),
-                    RoundedInputWidget(
+                    InputTextWidget(
                       controller: weightController,
                       focusNode: focusWeight,
                       labelText: 'Peso (kg)',
@@ -99,7 +90,7 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                         return null;
                       },
                     ),
-                    RoundedInputWidget(
+                    InputTextWidget(
                       controller: heightController,
                       labelText: 'Altura (m)',
                       keyboardType: TextInputType.number,

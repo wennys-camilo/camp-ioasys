@@ -1,7 +1,7 @@
-import 'package:calc_imc/app/modules/tasks/tasks_module.dart';
-import 'modules/home/imc_module.dart';
-import 'modules/login/login_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'modules/imc/imc_module.dart';
+import 'modules/login/login_module.dart';
+import 'modules/tasks/tasks_module.dart';
 
 class AppModule extends Module {
   @override
